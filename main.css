@@ -1,0 +1,47 @@
+body
+{
+    /* font style for all text */
+    font-family: 'Stardos Stencil', cursive;
+    color: black;
+    background-color: white;
+}
+
+@media all and (max-width: 480px)
+{
+    .half
+    {
+        float: left !important;
+        width: 50% !important;
+    }
+}
+
+a:link
+{
+    color: black;
+}
+
+a:visited
+{
+    color: black;
+}
+
+a:hover
+{
+    color: black;
+}
+
+a:focus
+{
+    color: black;
+}
+
+a:active
+{
+    color: black;
+}
+
+.col
+{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
