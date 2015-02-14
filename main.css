@@ -1,9 +1,9 @@
 body
 {
     /* font style for all text */
-    font-family: 'Stardos Stencil', cursive;
-    color: black;
-    background-color: white;
+    font-family: 'Slabo 27px', serif;
+    color: white;
+    background-color: black;
 }
 
 @media all and (max-width: 480px)
@@ -17,27 +17,27 @@ body
 
 a:link
 {
-    color: black;
+    color: white;
 }
 
 a:visited
 {
-    color: black;
+    color: white;
 }
 
 a:hover
 {
-    color: black;
+    color: white;
 }
 
 a:focus
 {
-    color: black;
+    color: white;
 }
 
 a:active
 {
-    color: black;
+    color: white;
 }
 
 .col
