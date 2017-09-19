@@ -1,85 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
 
-    <meta charset="utf-8"> 
+        <meta charset="utf-8"> 
 
-    <!--font-->
-    <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+        <!--font-->
+        <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
 
-    <!--jQuery-->
-    <script src="ExternalFrameworks/jquery/jquery-2.1.1.min.js"></script>
+        <!--jQuery-->
+        <script src="ExternalFrameworks/jquery/jquery-2.1.1.min.js"></script>
 
-    <!--bootstrap-->
-    <link rel="stylesheet" href="ExternalFrameworks/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="ExternalFrameworks/bootstrap/css/bootstrap-responsive.css">
-    <script src="ExternalFrameworks/bootstrap/js/bootstrap.js"></script>
+        <!--bootstrap-->
+        <link rel="stylesheet" href="ExternalFrameworks/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="ExternalFrameworks/bootstrap/css/bootstrap-responsive.css">
+        <script src="ExternalFrameworks/bootstrap/js/bootstrap.js"></script>
 
-    <!--user css for font-->
-    <link rel="stylesheet" href="main.css">
+        <!--user css for font-->
+        <link rel="stylesheet" href="main.css">
 
-    <script>
+    </head>
+    <body>
 
-    /*
-    *   get the actual tour dates from bandsintown via JSON
-    */
-    $.getJSON("http://api.bandsintown.com/artists/TODO/events.json?callback=?&app_id=TODO", function(result) 
-    {
-    	// clear content
-    	$("#tourDateContainer").html("");
+        <div class="container-fluid">
 
-        $.each(result, function(key, val) 
-        {
-            // retrieve
-            var date = new Date(val.datetime);
-            var dateString = date.toISOString().slice(0,10); 
-            var country = val.venue.country;
-            var city = val.venue.city ;
-            var venue = val.venue.name;
+            <br><br>
 
-            // compose
-            var contentString = dateString + " " + country.toUpperCase() + " " + city + ", " + venue;
+            <!-- band logo -->
+            <div align="center" style="padding: 2%">
+               <img src="img/Spiritual_Void_Logo_Transparent.png" width="525" heigth="525">
+            </div>
 
-            // write to div
-            $("#tourDateContainer").append(contentString + "<br>");
-        }); 
-    }); 
+            <!-- links -->
+            <div align="center" class="row-fluid">
+            	<h2>please visit:</h2><br>
+                <br>
+                <h1><a href="http://spiritualvoid.com/Facebook">Facebook</a></h1>
+                <h1><a href="http://spiritualvoid-doom.bandcamp.com/releases">Bandcamp</a></h1>
+                <h1><a href="http://spiritualvoid.bigcartel.com">Store</a></h1>
+            </h3>
 
-    </script>
+            <br>
 
-</head>
-<body>
+            <!-- email -->
+            <div align="center">
+                <h3><a href="mailto:intospiritualvoid@gmail.com">intospiritualvoid@gmail.com</a></h3>
+            </div>
 
-    <div class="container-fluid">
-
-        <br>
-
-        <!-- band photo -->
-        <div align="center">
-           <img src="img/Spiritual_Void_Logo_Transparent.jpg" width="600" heigth="600">
-           <!--<img src="img/Spiritual_Void_Logo_Simple.jpg" width="600" heigth="600">-->
         </div>
 
-        <!-- download link -->
-        <h2 align="center" class="row-fluid">
-            <br>
-            <a href="https://dl.dropboxusercontent.com/u/65241365/Spiritual%20Void%20-%20Demo%20MMXIV.rar"><u>download demo</u><br></a>
-            <br>
-        </h2>
-
-        <!-- links -->
-        <h3 align="center" class="row-fluid">
-        	please visit:<br>
-            <a href="http://spiritualvoid.com/Facebook">Facebook<br></a>
-            <a href="http://spiritualvoid.com/Youtube">Youtube<br></a>
-        </h3>
-
-        <!-- content: tour dates -->
-        <div align="center" class="row-fluid">
-            <h3 align="center" id="tourDateContainer" style="display: inline-block;text-align: left;">loading tour dates...</h3>
-        </div>
-
-    </div>
-
-</body>
+    </body>
 </html>
